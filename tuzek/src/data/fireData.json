@@ -1,0 +1,36 @@
+{
+ "data": [
+		{
+			"id": "0",
+			"date": "2022.07.31.",
+			"latitude": 46.451917,
+			"longitude": 19.940889,
+			"location": "Balástya",
+			"description": "Tíz hektárnyi gaz és avar gyulladt ki, 1 négyzetméteren egy tanya tetőszerkezete égett."        
+		},
+		{
+			"id": "1",
+			"date": "2022.08.01.",
+			"latitude": 46.271158,
+			"longitude": 18.100733,
+			"location": "Sásd",
+			"description": "Egy traktor gyulladt ki teljes egészében Sás külterületén. A munkagép mellett mintegy százötven körbála áll, amelynek egy részére már átterjedtek a lángok. A sásdi hivatásos tűzoltók két vízsugárral próbálják megakadályozni a tűz továbbterjedését. Az esethez a dombóvári hivatásos tűzoltók is kiérkeztek."        
+		},
+		{
+			"id": "2",
+			"date": "2022.08.01.",
+			"latitude": 46.497380,
+			"longitude": 19.485942,
+			"location": "Kiskunhalas",
+			"description": "Több mint öt hektáron gyulladt ki vegyes erdő aljnövényzete Kiskunhalas külterületén. A kiskunhalasi, a kiskőrösi, a ruzsai hivatásos és a kiskunhalasi önkéntes tűzoltók több vízsugárral megakadályozták a lángok továbbterjedését."        
+		},
+		{
+			"id": "3",
+			"date": "2022.08.01.",
+			"latitude": 46.203278,
+			"longitude": 19.843453,
+			"location": "Mórahalom, III. körzet tanya",
+			"description": "Öt-hatszáz méter hosszan ég a gaz és az avar a Mórahalom és Ásotthalom közötti tanyasi területen. A tűz belekapott a learatott gabonatáblába, valamint elérte egy lakatlan tanya udvarát is. Szegedről, Kiskunmajsáról és Hódmezővásárhelyről hivatásos, Mórahalomról önkéntes tűzoltók érkeztek az esethez, több vízsugárral és kéziszerszámokkal oltják a lángokat, amelyeket már körülhatároltak. Egy munkagép is érkezett a helyszínre, amellyel körbetárcsázzák a területet."        
+		}
+	]
+}

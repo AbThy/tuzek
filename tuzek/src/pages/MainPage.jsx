@@ -11,23 +11,32 @@ export default function MainPage() {
             <P>
                 Ahogy lassan az egész világon, Magyarországon is hatalmas probléma lett a szárazság.<br/><br/>
                 Erdők, mezőgazdasági területek és otthonok égnek az esőt hónapok óta nem látott tájon. <br/>
-                A szárazságban sorra vízhasználati korlátozásokat kell bevezetni. Amelyik gazda nem tud locsolni,
-                 nem számíthat jó termésre. Ez a globális probléma a jövőben erős élelmiszerhiánnyá és
+                Az aszály alatt sorra vízhasználati korlátozásokat kell bevezetni. Amelyik gazda nem tud locsolni,
+                nem számíthat jó termésre. Ez a globális probléma a jövőben erős élelmiszerhiánnyá és
                 éhínséggé nőhet.              
             </P>
-            <P/>
-            <P>
-                Az tuzek.hu -n interaktív térképen nézheted meg a magyarországi tüzek listáját. 
+            <P style={Blue}>
+                Az tuzek.hu -n interaktív térképen nézheted meg a magyarországi vadtüzek listáját. (Tehát kigyulladt üzemek, kamionok, stb. nincsenek jelölve,
+                csak ahol erdők, mezők, avar, vagy hasonlók égtek.) <br/>
                 A tűzesetek pozíciója, ideje és a hozzájuk tartozó hírek a <A href="https://katasztrofavedelem.hu" target="_blank">Katasztrófavédelem weboldaláról</A> származnak.
+                <br/>Jelenleg a 2022 nyarán történt eseteket mutatja a térkép, a jövőben pedig tervben van egy részletes kereső fejlesztése.
             </P>
-            <P/>
             <P>
-                Hogyan előzzük meg a katasztrófát? Érdekesség a témában: <A href="https://www.youtube.com/watch?v=vpTHi7O66pI&ab_channel=TED">Allan Savory TED talk</A>
+                Rengeteg tűz autóutak vagy vasúti pályák mellett keletkezik. Sajnos valószínű, hogy ezeket eldobott csikkek okozták.
+                Nem csak rondábbá tesszük környezetünket, legrosszabb esetben akár családokat tehetünk utcára vagy életeket olthatunk 
+                ki egy-egy felelőtlen döntéssel. <br/><br/>
+                1. Ne dobj el égő csikket (de lehetőleg mást sem) <br/>
+                2. Soha ne gyújts tüzet tűzgyújtűsi tilalom alatt <br/>
+                3. Ne hagyj felügyeletlenül még izzó tűzrakóhelyet sem <br/>
+                4. Ha látszólag teljesen ki is aludt, a tűz magja napokig forró maradhat, és egy kis széllel meggyújthatja környezetét. Mindig öntsük le folyadékkal a tűzrakóhelyet, mielőtt elhagyjuk.
+            </P>
+            <P>
+                Hogyan állítsuk meg a szárazságot? Érdekesség a témában: <A href="https://www.youtube.com/watch?v=vpTHi7O66pI&ab_channel=TED" target="_blank">Allan Savory TED talk</A>
             </P>
             <P/>
             <P/>
             <PSign>
-                2022 - Szigethy Ábrahám - fwsystems.hu
+                2022 - Szigethy Ábrahám - <A href="https://wwww.fwsystems.hu" target="_blank">fwsystems.hu</A>
             </PSign>
         </Section>
         <MapSection>
@@ -73,21 +82,10 @@ const IMG = styled.img`
     max-width: 70%;
     border-radius: 30px;
     box-shadow: 2px 5px 5px #fff1cc40;
-
-    &:hover{
-        transform: scale(1.02);
-        transition: 0.3s;
-        cursor: pointer;
-    }
 `;
 const H3Link = styled.h3`
     color: white;
     text-decoration: none;
-    &:hover{
-        transform: scale(1.02);
-        transition: 0.3s;
-        cursor: pointer;
-    }
 `;
 const noDecor = {
     textDecoration: "none",
@@ -116,7 +114,20 @@ const MapSection = styled.div`
     color: #fff1cc;
     justify-content: center;
     align-items: center;
+
+    transition: 0.3s;
+    transition-timing-function: ease-out;
+    &:hover{
+        transform: scale(1.03);
+        transition: 0.4s;
+        transition-timing-function: ease-out;
+    }
+
     @media(orientation: portrait){
         width: 90vw;
     }
 `;
+
+const Blue = {
+    color: '#CCDEFF'
+}

@@ -3,7 +3,6 @@ import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet';
 import styled from 'styled-components';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-import fireData from '../data/fireData.json';
 import { getFires } from '../API/fireAPI.js';
 import { updateView } from '../API/viewAPI';
 
@@ -17,8 +16,9 @@ export default function MapPage() {
         getFires().then(r => {
             setFireData(r.data);
         }).then(r2 => {
-            setReady(true);
-            updateView();
+            updateView().then(r3 => {
+                setReady(true);
+            })
         })
     },[]);
 
@@ -30,6 +30,16 @@ export default function MapPage() {
         popupAnchor: new L.Point(0, -20),
         shadowAnchor: null,
         iconSize: new L.Point(40, 45),
+        background: null
+    })
+    const HugeFireMarker = L.icon({
+        iconUrl: require('../media/fireIcon_huge.png'),
+        iconAnchor: null,
+        shadowUrl: null,
+        shadowSize: null,
+        popupAnchor: new L.Point(0, -20),
+        shadowAnchor: null,
+        iconSize: new L.Point(60, 80),
         background: null
     })
 
@@ -48,7 +58,7 @@ export default function MapPage() {
                     <Marker 
                         key={f.id}
                         position={[f.latitude, f.longitude]} 
-                        icon={FireMarker}
+                        icon={f.huge ? HugeFireMarker : FireMarker}
                     >
                             <Popup>
                                 <H4>{f.location}</H4>
@@ -63,7 +73,7 @@ export default function MapPage() {
 
         <Footer>
             <A href='https://www.katasztrofavedelem.hu/' target={'_blank'}>Forrás: Katasztrófavédelem</A>
-            <A href='https://fwsystems.hu' target={'_blank'}>Szigethy Ábrahám András - fwsystems.hu</A>
+            <A href='https://fwsystems.hu' target={'_blank'}>Szigethy Ábrahám - fwsystems.hu</A>
             <A href='https://www.freepik.com/free-vector/flame-icons-collection_1006711.htm#query=fire' target={"_blank"}>Flame icon vector created by rwdd_studios - www.freepik.com</A>
         </Footer>
 
@@ -79,14 +89,14 @@ const Container = styled.div`
     width: 96vw;
     height: 94vh;
     margin: auto;
-    margin-top: 3vh;
+    margin-top: 2vh;
     border: 1px solid red;
     box-shadow: 0px 0px 20px #e21616;
     border-radius: 25px;
     @media(orientation: portrait){
         width: 98vw;
-        height: 98vh;
-        margin-top: 1vh;
+        height: 94vh;
+        margin-top: 1vh;   
     }
 `;
 
@@ -111,10 +121,14 @@ const Footer = styled.div`
   display: flex;
   margin-left: 1vw;
   justify-content: space-around;
+  padding-left: 1vw;
   
 `;
 const A = styled.a`
   color: white;
   margin-top: 0.5vh;
   font-size: 12px;
+  @media(orientation: portrait){
+        font-size: 10px; 
+    }
 `;

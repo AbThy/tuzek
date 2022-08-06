@@ -25,10 +25,10 @@ export default function MainPage() {
                 Rengeteg tűz autóutak vagy vasúti pályák mellett keletkezik. Sajnos valószínű, hogy ezeket eldobott csikkek okozták.
                 Nem csak rondábbá tesszük környezetünket, legrosszabb esetben akár családokat tehetünk utcára vagy életeket olthatunk 
                 ki egy-egy felelőtlen döntéssel. <br/><br/>
-                1. Ne dobj el égő csikket (de lehetőleg mást sem) <br/>
-                2. Soha ne gyújts tüzet tűzgyújtűsi tilalom alatt <br/>
-                3. Ne hagyj felügyeletlenül még izzó tűzrakóhelyet sem <br/>
-                4. Ha látszólag teljesen ki is aludt, a tűz magja napokig forró maradhat, és egy kis széllel meggyújthatja környezetét. Mindig öntsük le folyadékkal a tűzrakóhelyet, mielőtt elhagyjuk.
+                1. Ne dobj el égő csikket (de lehetőleg mást sem)! <br/>
+                2. Soha ne gyújts tüzet tűzgyújtűsi tilalom alatt! <br/>
+                3. Ne hagyj felügyeletlenül még izzó tűzrakóhelyet sem! <br/>
+                4. Ha látszólag teljesen ki is aludt, a tűz magja napokig forró maradhat, és egy kis széllel meggyújthatja környezetét. Mindig öntsd le folyadékkal a tűzrakóhelyet, mielőtt elhagyjuk!
             </P>
             <P>
                 Hogyan állítsuk meg a szárazságot? Érdekesség a témában: <A href="https://www.youtube.com/watch?v=vpTHi7O66pI&ab_channel=TED" target="_blank">Allan Savory TED talk</A>
@@ -36,7 +36,7 @@ export default function MainPage() {
             <P/>
             <P/>
             <PSign>
-                2022 - Szigethy Ábrahám - <A href="https://wwww.fwsystems.hu" target="_blank">fwsystems.hu</A>
+                2022 - <A href="https://wwww.fwsystems.hu" target="_blank">Szigethy Ábrahám</A>
             </PSign>
         </Section>
         <MapSection>

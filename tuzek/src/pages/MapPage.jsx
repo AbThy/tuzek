@@ -73,7 +73,7 @@ export default function MapPage() {
 
         <Footer>
             <A href='https://www.katasztrofavedelem.hu/' target={'_blank'}>Forrás: Katasztrófavédelem</A>
-            <A href='https://fwsystems.hu' target={'_blank'}>Szigethy Ábrahám - fwsystems.hu</A>
+            <A href='https://fwsystems.hu' target={'_blank'}>Szigethy Ábrahám</A>
             <A href='https://www.freepik.com/free-vector/flame-icons-collection_1006711.htm#query=fire' target={"_blank"}>Flame icon vector created by rwdd_studios - www.freepik.com</A>
         </Footer>
 

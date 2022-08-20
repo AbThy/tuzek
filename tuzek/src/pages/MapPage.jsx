@@ -5,12 +5,15 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { getFires } from '../API/fireAPI.js';
 import { updateView } from '../API/viewAPI';
+import DateSearch from '../components/DateSearch.jsx';
+import { useParams } from 'react-router-dom';
 
 export default function MapPage() {
 
     const [fireData, setFireData]   = useState(null);
     const [ready, setReady]         = useState(false);
-    const [mapZoom, setMapZoom]       = useState(8);
+    const [mapSize, setMapSize]     = useState(6);
+    const {start_year, start_month, start_day, end_year, end_month, end_day} = useParams();
 
     useEffect(() => {
         getFires().then(r => {
@@ -48,7 +51,7 @@ export default function MapPage() {
         <React.Fragment>
 
         <Container>
-            <MapContainer center={[47.2, 19.42]} zoom={mapZoom} scrollWheelZoom={true} style={MapContainerStyle}>
+            <MapContainer center={[47.2, 19.42]} zoom={mapSize} scrollWheelZoom={true} style={MapContainerStyle}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -73,7 +76,7 @@ export default function MapPage() {
 
         <Footer>
             <A href='https://www.katasztrofavedelem.hu/' target={'_blank'}>Forrás: Katasztrófavédelem</A>
-            <A href='https://fwsystems.hu' target={'_blank'}>Szigethy Ábrahám</A>
+            <A href='https://fwsystems.hu' target={'_blank'}>Future Web Systems</A>
             <A href='https://www.freepik.com/free-vector/flame-icons-collection_1006711.htm#query=fire' target={"_blank"}>Flame icon vector created by rwdd_studios - www.freepik.com</A>
         </Footer>
 
